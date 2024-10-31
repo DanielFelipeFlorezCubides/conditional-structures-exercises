@@ -1,15 +1,14 @@
-# Escriba un programa que pida al usuario dos palabras, 
-# y que indique cuál de ellas es la más larga y por cuántas letras lo es.
+# Escriba un programa que reciba como entrada dos números, y los muestre ordenados de menor a mayor:
+n = int(input('Give a number of numbers you wanna put: '))
 
-firstWord = input('Gimme a word: ')
-secondWord = input('Gimme another word: ')
+numbersList = []
 
-lenght_1 = len(firstWord)
-lenght_2 = len(secondWord)
+for i in range(n):
+    number = int(input(f'Type the number {i+1}: '))
+    numbersList.append(number)
 
-if lenght_1 > lenght_2:
-    difference = lenght_1 - lenght_2
-    print(f'The word {firstWord} has {difference} more letters than {secondWord}')
-else:
-    difference = lenght_2 - lenght_1
-    print(f'The word {secondWord} has {difference} more letters than {firstWord}')
+numbersList.sort() # This function is to ordering the numbers in the list
+
+print('The number list in order is: ')
+for number in numbersList:
+    print(number)
