@@ -1,14 +1,15 @@
-# Escriba un programa que reciba como entrada dos números, y los muestre ordenados de menor a mayor:
-n = int(input('Give a number of numbers you wanna put: '))
+# Escriba un programa que determine si un caracter ingresado es letra, número, o ninguno de los dos. 
+# En caso que sea letra, determine si es mayúscula o minúscula.
 
-numbersList = []
+type = input('Type a single character please: ')
 
-for i in range(n):
-    number = int(input(f'Type the number {i+1}: '))
-    numbersList.append(number)
-
-numbersList.sort() # This function is to ordering the numbers in the list
-
-print('The number list in order is: ')
-for number in numbersList:
-    print(number)
+if 'a' <= type <= 'z' or 'A' <= type <= 'Z':
+    print("The character is a letter")
+    if 'A' <= type <= 'Z':
+        print('The charaacter is an upper case')
+    else:
+        print('The character is a lower case')
+elif '0' <= type <= '9':
+    print('The character is a number')
+else:
+    print('The character is not one of the options')
