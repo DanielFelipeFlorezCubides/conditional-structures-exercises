@@ -1,15 +1,20 @@
-# Escriba un programa que determine si un caracter ingresado es letra, número, o ninguno de los dos. 
-# En caso que sea letra, determine si es mayúscula o minúscula.
+# Escriba un programa que simule una calculadora básica, este puede realizar operación de suma, resta, multiplicación y división. 
+# El programa debe recibir como entrada 2 números reales y un operador, que puede ser +, -, * o /. 
+# La salida del programa debe ser el resultado de la operación.
 
-type = input('Type a single character please: ')
+firstNumber = float(input('Type a number: '))
+secondNumber = float(input('Type another one: '))
+operation = input('Which operation do you wish to do? (+ , - , * , /): ')
 
-if 'a' <= type <= 'z' or 'A' <= type <= 'Z':
-    print("The character is a letter")
-    if 'A' <= type <= 'Z':
-        print('The charaacter is an upper case')
-    else:
-        print('The character is a lower case')
-elif '0' <= type <= '9':
-    print('The character is a number')
+if operation == '+':
+    result  = firstNumber + secondNumber
+    print(f'The result is: {result}')
+elif operation == '-':
+    result = firstNumber - secondNumber
+    print(f'The result is: {result}')
+elif operation == '*':
+    result = firstNumber * secondNumber
+    print(f'The result is: {result}')
 else:
-    print('The character is not one of the options')
+    result = firstNumber / secondNumber
+    print(f'The result is: {result}')
