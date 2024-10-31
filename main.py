@@ -1,15 +1,15 @@
-# Escriba un programa que pida dos números enteros y que calcule la división, 
-# indicando si la división es exacta o no.
+# Escriba un programa que pida al usuario dos palabras, 
+# y que indique cuál de ellas es la más larga y por cuántas letras lo es.
 
-dividend = int(input('Give me the number will be divided: '))
-divisor = int(input('Give me the number will divide the other one: '))
-remainder = dividend % divisor
-quotient = dividend // divisor
+firstWord = input('Gimme a word: ')
+secondWord = input('Gimme another word: ')
 
-if dividend % divisor == 0:
-    print('The number is exactly divided')
+lenght_1 = len(firstWord)
+lenght_2 = len(secondWord)
+
+if lenght_1 > lenght_2:
+    difference = lenght_1 - lenght_2
+    print(f'The word {firstWord} has {difference} more letters than {secondWord}')
 else:
-    print('The number cannot be exactly divided')
-
-print(f'This is the quotient: {quotient}')
-print(f'This is the remainder: {remainder}')
+    difference = lenght_2 - lenght_1
+    print(f'The word {secondWord} has {difference} more letters than {firstWord}')
