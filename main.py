@@ -9,5 +9,9 @@ currentDay = int(input('Type the current day number: '))
 currentMonth = int(input('Type the current month number: '))
 currentYear = int(input('Type the current year number: '))
 
-old = currentYear - year
-print(f'You are {old} years old')
+old = (currentYear - year)
+
+if month < currentMonth or month == currentMonth and day <= currentDay:
+    print(f'You are {old} years old')
+else:
+    print(f'You are {old - 1} years old')
